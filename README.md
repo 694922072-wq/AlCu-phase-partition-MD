@@ -37,7 +37,11 @@ The controlled mechanical comparison uses nine independent velocity-seed traject
 
 ## Data availability
 
-The GitHub layer and Zenodo archive are technically prepared but have not been uploaded by this task. After deposition, replace `[GITHUB_URL]` and `[ZENODO_DOI_OR_RECORD_URL]` in `DATA_AVAILABILITY_STATEMENT.md`. No URL or DOI has been invented.
+GitHub repository: https://github.com/694922072-wq/AlCu-phase-partition-MD
+
+Zenodo archival record (reserved DOI; the record remains an unpublished draft): https://doi.org/10.5281/zenodo.22043296
+
+The large archival payload is assigned to the Zenodo record above and will become accessible only after the author-approved publication step.
 
 ## Potential
 
@@ -51,7 +55,7 @@ The third-party potential `CuAgAuNiPdPtAlPbFeMoTaWMgCoTiZr_Zhou04.eam.alloy` is 
 
 ## Citation
 
-Use `CITATION.cff`. Add the final article DOI and Zenodo DOI after assignment.
+Use `CITATION.cff`. The reserved Zenodo DOI is included there; add the final article DOI after assignment.
 
 ## Limitations and audit
 
