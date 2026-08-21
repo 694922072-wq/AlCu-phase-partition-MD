@@ -1,0 +1,13 @@
+{
+  "public_release_total_files": 386,
+  "public_release_total_bytes": 6297381654,
+  "github_recommended_files": 124,
+  "github_recommended_bytes": 753571,
+  "zenodo_expanded_payload_files": 258,
+  "zenodo_expanded_payload_bytes": 4063202237,
+  "zenodo_zip_bytes": 2233375981,
+  "zenodo_zip_sha256": "9a28974a4011641e8eae1797034a4ce7f34b0c4b08d2250075ec92eefaec43cb",
+  "zenodo_inventory_rows": 258,
+  "retained_state_files": 84,
+  "final_state_pairs": 9
+}

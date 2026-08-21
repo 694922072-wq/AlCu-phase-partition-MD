@@ -1,0 +1,65 @@
+clear
+
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       outputs/M3_SYM_eq_300K_xy_z.data
+
+mass            1 26.9815385
+mass            2 63.546
+
+pair_style      eam/alloy
+pair_coeff      * * potentials/CuAgAuNiPdPtAlPbFeMoTaWMgCoTiZr_Zhou04.eam.alloy Al Cu
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes one 3000 page 30000
+
+timestep        0.001
+reset_timestep  0
+
+compute         peatom all pe/atom
+compute         csym all centro/atom fcc
+
+variable        L0 equal $(lx)
+variable        erate equal 1.0e-3
+variable        target_strain equal 0.25
+variable        total_steps equal 250000
+
+variable        strain equal (lx-v_L0)/v_L0
+variable        strain_percent equal 100.0*v_strain
+variable        stress_xx_GPa equal -pxx/10000.0
+
+variable        vstep equal step
+variable        vtemp equal temp
+variable        vpe equal pe
+variable        vetotal equal etotal
+variable        vpxx equal pxx
+variable        vpyy equal pyy
+variable        vpzz equal pzz
+variable        vlx equal lx
+variable        vly equal ly
+variable        vlz equal lz
+
+thermo          1000
+thermo_style    custom step temp pe etotal press pxx pyy pzz lx ly lz vol v_strain v_strain_percent v_stress_xx_GPa
+
+fix             NVT all nvt temp 300.0 300.0 0.1
+fix             DEF all deform 1 x erate ${erate} units box remap x
+
+fix             SS all print 100 "${vstep} ${strain} ${strain_percent} ${stress_xx_GPa} ${vtemp} ${vpe} ${vetotal} ${vpxx} ${vpyy} ${vpzz} ${vlx} ${vly} ${vlz}" file outputs/M3_SYM_stress_strain_x25_xy_z_clean.dat screen no title "step strain strain_percent stress_xx_GPa temp pe etotal pxx pyy pzz lx ly lz"
+
+dump            D1 all custom 1000 dumps/M3_SYM_tensile_x25_xy_z_clean_light.lammpstrj id type x y z c_peatom c_csym
+dump_modify     D1 sort id flush yes
+
+run             ${total_steps}
+
+unfix           SS
+unfix           DEF
+unfix           NVT
+
+undump          D1
+
+write_data      outputs/M3_SYM_tensile_x25_xy_z_clean_final.data
+write_restart   outputs/M3_SYM_tensile_x25_xy_z_clean_final.restart

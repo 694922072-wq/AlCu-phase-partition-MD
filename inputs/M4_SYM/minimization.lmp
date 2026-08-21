@@ -1,0 +1,35 @@
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       structure/M4_SYM_Cu_Al4Cu9_Al2Cu_Al_PPP_ready.data
+
+# type 1 = Al, type 2 = Cu
+mass 1 26.9815385
+mass 2 63.546
+
+pair_style      eam/alloy
+pair_coeff      * * potentials/CuAgAuNiPdPtAlPbFeMoTaWMgCoTiZr_Zhou04.eam.alloy Al Cu
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes one 3000 page 30000
+
+compute peatom  all pe/atom
+compute csym    all centro/atom fcc
+
+thermo          500
+thermo_style    custom step atoms pe etotal press pxx pyy pzz lx ly lz fmax fnorm
+
+dump dmin       all custom 200 dumps/M4_SYM_min.lammpstrj id type x y z c_peatom c_csym
+dump_modify     dmin sort id flush yes
+
+min_style       cg
+minimize        1.0e-10 1.0e-8 20000 200000
+
+undump          dmin
+
+write_data      outputs/M4_SYM_min.data
+write_restart   outputs/M4_SYM_min.restart
+

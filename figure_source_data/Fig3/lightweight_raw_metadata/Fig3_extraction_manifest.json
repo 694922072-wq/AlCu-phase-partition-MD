@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-06-30 17:14:21",
+  "elapsed_seconds": 28.454,
+  "software": "OVITO Pro AtomicStrainModifier via ovitos.exe",
+  "d2min_reference_frame": 0,
+  "d2min_cutoff_A": 4.0,
+  "deltaPE_definition": "c_peatom(frame) - c_peatom(frame 0) for the same atom identifier",
+  "threshold_scheme": "four-model global P95, 10 A region-band source tables",
+  "d2min_threshold_value": 1420.9058752475846,
+  "deltaPE_threshold_value": 0.1997899999999997,
+  "display_depth_A": 50.0,
+  "selection_region": "construction-source central Al matrix layer",
+  "model_summaries": [
+    {
+      "model": "M3_SYM",
+      "frames": 251,
+      "construction_phase_counts": {
+        "Cu": 152704,
+        "Al": 124128,
+        "Al2Cu": 180896,
+        "Al4Cu9": 0
+      },
+      "selected_al_matrix_atoms": 124128,
+      "selected_cu_al_matrix_atoms": 276832,
+      "metric_frame_count": 22
+    },
+    {
+      "model": "M4_RATIO",
+      "frames": 251,
+      "construction_phase_counts": {
+        "Cu": 151556,
+        "Al": 124128,
+        "Al2Cu": 137380,
+        "Al4Cu9": 62866
+      },
+      "selected_al_matrix_atoms": 124128,
+      "selected_cu_al_matrix_atoms": 275684,
+      "metric_frame_count": 21
+    },
+    {
+      "model": "M4_SYM",
+      "frames": 251,
+      "construction_phase_counts": {
+        "Cu": 151556,
+        "Al": 124128,
+        "Al2Cu": 82084,
+        "Al4Cu9": 122978
+      },
+      "selected_al_matrix_atoms": 124128,
+      "selected_cu_al_matrix_atoms": 275684,
+      "metric_frame_count": 22
+    }
+  ],
+  "metric_csv": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig3_finalization_workflow\\data\\Fig3_overlap_metric_data.csv",
+  "snapshot_manifest_csv": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig3_finalization_workflow\\data\\Fig3_snapshot_manifest.csv"
+}

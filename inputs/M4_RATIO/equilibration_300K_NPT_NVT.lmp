@@ -1,0 +1,44 @@
+clear
+
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       outputs/M4_SYM_RATIO_min.data
+
+mass            1 26.9815385
+mass            2 63.546
+
+pair_style      eam/alloy
+pair_coeff      * * potentials/CuAgAuNiPdPtAlPbFeMoTaWMgCoTiZr_Zhou04.eam.alloy Al Cu
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes one 3000 page 30000
+
+timestep        0.001
+reset_timestep  0
+
+compute         peatom all pe/atom
+compute         csym all centro/atom fcc
+
+thermo          1000
+thermo_style    custom step temp pe etotal press pxx pyy pzz lx ly lz vol
+
+dump            deq all custom 1000 dumps/M4_SYM_RATIO_eq_300K_xy_z.lammpstrj id type x y z c_peatom c_csym
+dump_modify     deq sort id flush yes
+
+velocity        all create 300.0 4928459 mom yes rot yes dist gaussian
+
+fix             EQ1 all npt temp 300.0 300.0 0.1 x 0.0 0.0 1.0 y 0.0 0.0 1.0 z 0.0 0.0 1.0 couple xy
+run             50000
+unfix           EQ1
+
+fix             EQ2 all nvt temp 300.0 300.0 0.1
+run             20000
+unfix           EQ2
+
+undump          deq
+
+write_data      outputs/M4_SYM_RATIO_eq_300K_xy_z.data
+write_restart   outputs/M4_SYM_RATIO_eq_300K_xy_z.restart

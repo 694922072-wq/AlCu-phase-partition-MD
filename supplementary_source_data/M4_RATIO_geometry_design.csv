@@ -1,0 +1,8 @@
+model,region_name,target_thickness_A,actual_thickness_A,source_phase,source_file,z_repeat_or_cut,thickness_error_A,notes
+M4_SYM_RATIO,Cu_half_left,43.38,43.38,Cu,atomsk --create fcc 3.615 Cu,12,0.0,Same as M4_SYM Cu_half.
+M4_SYM_RATIO,Al4Cu9_left_thin,17.23546108,17.23546108,Al4Cu9,structure/Al4Cu9_full.cif,2,0.0,Al4Cu9 repeat reduced from M4_SYM z4 to z2.
+M4_SYM_RATIO,Al2Cu_left_adjusted,46.49746108,48.769999999999996,Al2Cu,structure/Al2Cu.cif,10,2.2725389199999952,Adjusted to keep single-side IMC total close to M4_SYM.
+M4_SYM_RATIO,Al_center,97.19999999999999,97.19999999999999,Al,atomsk --create fcc 4.05 Al,24,0.0,Same as M4_SYM Al layer.
+M4_SYM_RATIO,Al2Cu_right_adjusted,46.49746108,48.769999999999996,Al2Cu,structure/Al2Cu.cif,10,2.2725389199999952,Symmetric counterpart of left Al2Cu_adjusted.
+M4_SYM_RATIO,Al4Cu9_right_thin,17.23546108,17.23546108,Al4Cu9,structure/Al4Cu9_full.cif,2,0.0,Symmetric counterpart of left Al4Cu9_thin.
+M4_SYM_RATIO,Cu_half_right,43.38,43.38,Cu,atomsk --create fcc 3.615 Cu,12,0.0,Same as M4_SYM Cu_half.

@@ -1,0 +1,17 @@
+﻿script_name,repository_path,input,output,purpose
+extract_mechanical_metrics.py,06_Atomistic_Analysis_Scripts/mechanical/extract_mechanical_metrics.py,raw stress-strain files,"per-trajectory sigma15, peak and F50 metrics",mechanical metric extraction
+f50_contract.py,06_Atomistic_Analysis_Scripts/mechanical/f50_contract.py,stress-strain sequence,F50 event,formal F50 definition
+extract_n3_metrics_local.py,06_Atomistic_Analysis_Scripts/mechanical/extract_n3_metrics_local.py,nine authoritative trajectories,metrics_per_trajectory_local.csv; n3_summary_local.csv,local independent n=3 extraction
+audit_sigma15_grid_f50.py,06_Atomistic_Analysis_Scripts/mechanical/audit_sigma15_grid_f50.py,nine metrics and raw grids,compute_vs_local.csv; F50 sensitivity,sigma15 grid and F50 cross-check
+04_pe_d2min_overlap_analysis.py,06_Atomistic_Analysis_Scripts/candidate_localization/04_pe_d2min_overlap_analysis.py,per-atom D2min and deltaPE tables,candidate overlap tables,candidate-overlap analysis
+01_damage_cluster_batch2.py,06_Atomistic_Analysis_Scripts/cluster/01_damage_cluster_batch2.py,overlap-candidate atoms,connected-component cluster metrics,candidate-cluster analysis
+extract_fig6_stage2A_dense_metric.py,06_Atomistic_Analysis_Scripts/PTM/extract_fig6_stage2A_dense_metric.py,representative atomic states,PTM HCP-like metric CSV,PTM extraction
+render_fig6_stage2A_schemeA_50A.py,06_Atomistic_Analysis_Scripts/PTM/render_fig6_stage2A_schemeA_50A.py,representative atomic states,50 A display-slab snapshots,PTM snapshot rendering
+run_fig7_stage1_dxa_pilot.py,06_Atomistic_Analysis_Scripts/DXA/run_fig7_stage1_dxa_pilot.py,selected FCC Cu/Al matrix states,DXA metrics and snapshots,DXA analysis
+Fig1_R2_rebuild_source.py,06_Atomistic_Analysis_Scripts/plotting/Fig1_R2_rebuild_source.py,Fig1 structural images and model metadata,Fig1 vector/raster assembly,Fig1 assembly
+Fig2_n3_build.py,06_Atomistic_Analysis_Scripts/plotting/Fig2_n3_build.py,nine raw stress-strain histories and n=3 summary,Fig2 n=3 artwork,Fig2 mechanical plotting
+Fig3_panel_g_replot_script.py,06_Atomistic_Analysis_Scripts/plotting/Fig3_panel_g_replot_script.py,Fig3 panel-g processed CSV,Fig3 quantitative panel,Fig3 quantitative plotting
+Fig4_panel_g_replot_script.py,06_Atomistic_Analysis_Scripts/plotting/Fig4_panel_g_replot_script.py,Fig4 panel-g processed CSV,Fig4 quantitative panel,Fig4 quantitative plotting
+export_fig5.py,06_Atomistic_Analysis_Scripts/plotting/export_fig5.py,final editable Fig5 n=3 SVG,Fig5 PNG/TIF/PDF exports,Fig5 final export
+Fig6_quant_replot_script.py,06_Atomistic_Analysis_Scripts/plotting/Fig6_quant_replot_script.py,Fig6 PTM quantitative CSV,Fig6 quantitative panel,Fig6 PTM plotting
+Fig7_quant_replot_script.py,06_Atomistic_Analysis_Scripts/plotting/Fig7_quant_replot_script.py,Fig7 DXA quantitative CSV,Fig7 quantitative panel,Fig7 DXA plotting

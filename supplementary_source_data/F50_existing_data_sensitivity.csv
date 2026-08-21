@@ -1,0 +1,5 @@
+model,raw_F50_strain_percent,three_point_average_F50_strain_percent,three_consecutive_F50_strain_percent,raw_F40_strain_percent,raw_F60_strain_percent,ordering_retained,maximum_criterion_induced_shift_percentage_points,definition_note
+M3_SYM,19.20,19.20,19.20,19.24,19.16,YES,0.00,all thresholds use 50% of the approved raw model-specific peak; event strain is the first qualifying row
+M4_RATIO,17.98,17.98,17.98,18.02,17.94,YES,0.00,all thresholds use 50% of the approved raw model-specific peak; event strain is the first qualifying row
+M4_SYM,17.74,17.74,17.74,17.78,17.71,YES,0.00,all thresholds use 50% of the approved raw model-specific peak; event strain is the first qualifying row
+M4_LIT,18.66,18.66,18.66,18.69,18.62,YES,0.00,all thresholds use 50% of the approved raw model-specific peak; event strain is the first qualifying row

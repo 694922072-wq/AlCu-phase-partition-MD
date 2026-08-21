@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite the associated article and the archived release."
+title: "Al4Cu9/Al2Cu phase-partition sensitivity in Cu/Al interfacial multilayers"
+type: dataset
+authors:
+  - family-names: Gao
+    given-names: Enzhi
+  - family-names: Leng
+    given-names: Mingyang
+  - family-names: Wang
+    given-names: Jie
+  - family-names: Zhu
+    given-names: Zhi
+  - family-names: Xu
+    given-names: Rongzheng
+version: "1.0.0"
+date-released: 2026-08-20
+preferred-citation:
+  type: article
+  title: "Al4Cu9/Al2Cu phase-partition sensitivity in Cu/Al interfacial multilayers: a molecular dynamics study of load-bearing and candidate localization"
+  authors:
+    - family-names: Gao
+      given-names: Enzhi
+    - family-names: Leng
+      given-names: Mingyang
+    - family-names: Wang
+      given-names: Jie
+    - family-names: Zhu
+      given-names: Zhi
+    - family-names: Xu
+      given-names: Rongzheng
+  journal: "Computational Materials Science"

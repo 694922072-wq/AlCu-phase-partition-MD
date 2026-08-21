@@ -1,0 +1,3 @@
+type 1 = Al
+type 2 = Cu
+pair_coeff order = Al Cu

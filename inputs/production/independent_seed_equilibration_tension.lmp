@@ -1,0 +1,110 @@
+# Al-Cu controlled n=3 replica: independent 300 K velocity seed -> full equilibration -> 25% tension
+# Required command-line variables:
+#   model, start_data, potential_file, seed, outprefix
+# Run from an isolated job directory containing outputs/, restart/, logs/.
+
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       ${start_data}
+
+mass            1 26.9815385
+mass            2 63.546
+
+pair_style      eam/alloy
+pair_coeff      * * ${potential_file} Al Cu
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes one 3000 page 30000
+
+timestep        0.001
+reset_timestep  0
+
+thermo          1000
+thermo_style    custom step temp pe etotal press pxx pyy pzz lx ly lz vol
+thermo_modify   flush yes
+
+# Independent thermal initialization. Preserve the historical production command exactly.
+velocity        all create 300.0 ${seed} mom yes rot yes dist gaussian
+
+# Historical 300 K equilibration protocol: 50 ps NPT, then 20 ps NVT.
+restart         10000 restart/${outprefix}_equil_step_*.restart
+fix             EQ1 all npt temp 300.0 300.0 0.1 x 0.0 0.0 1.0 y 0.0 0.0 1.0 z 0.0 0.0 1.0 couple xy
+run             50000
+unfix           EQ1
+
+fix             EQ2 all nvt temp 300.0 300.0 0.1
+run             20000
+unfix           EQ2
+restart         0
+
+write_data      outputs/${outprefix}_equilibrated.data
+write_restart   outputs/${outprefix}_equilibrated.restart
+
+# Reproduce the historical two-script boundary exactly: clear and read the written text data
+# before starting tension. Command-line variables survive clear.
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+read_data       outputs/${outprefix}_equilibrated.data
+mass            1 26.9815385
+mass            2 63.546
+pair_style      eam/alloy
+pair_coeff      * * ${potential_file} Al Cu
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes one 3000 page 30000
+timestep        0.001
+
+# Tension: historical 300 K NVT + x engineering strain rate 1e-3 ps^-1; y/z fixed.
+reset_timestep  0
+variable        L0 equal $(lx)
+variable        XLO0 equal $(xlo)
+variable        XHI_TARGET equal $(xlo+1.25*lx)
+variable        erate equal 1.0e-3
+variable        total_steps equal 250000
+
+print            "model ${model}" file outputs/${outprefix}_tension_reference.txt screen no
+print            "seed ${seed}" append outputs/${outprefix}_tension_reference.txt screen no
+print            "L0 ${L0}" append outputs/${outprefix}_tension_reference.txt screen no
+print            "xlo0 ${XLO0}" append outputs/${outprefix}_tension_reference.txt screen no
+print            "xhi_target ${XHI_TARGET}" append outputs/${outprefix}_tension_reference.txt screen no
+print            "final_step 250000" append outputs/${outprefix}_tension_reference.txt screen no
+
+variable        strain equal (lx-v_L0)/v_L0
+variable        strain_percent equal 100.0*v_strain
+variable        stress_xx_GPa equal -pxx/10000.0
+
+variable        vstep equal step
+variable        vtemp equal temp
+variable        vpe equal pe
+variable        vetotal equal etotal
+variable        vpxx equal pxx
+variable        vpyy equal pyy
+variable        vpzz equal pzz
+variable        vlx equal lx
+variable        vly equal ly
+variable        vlz equal lz
+
+thermo          1000
+thermo_style    custom step temp pe etotal press pxx pyy pzz lx ly lz vol v_strain v_strain_percent v_stress_xx_GPa
+thermo_modify   flush yes
+
+fix             NVT all nvt temp 300.0 300.0 0.1
+fix             DEF all deform 1 x erate ${erate} units box remap x
+fix             SS all print 100 "${vstep} ${strain} ${strain_percent} ${stress_xx_GPa} ${vtemp} ${vpe} ${vetotal} ${vpxx} ${vpyy} ${vpzz} ${vlx} ${vly} ${vlz}" file outputs/${outprefix}_stress_strain.dat screen no title "step strain strain_percent stress_xx_GPa temp pe etotal pxx pyy pzz lx ly lz"
+
+restart         50000 restart/${outprefix}_tension_step_*.restart
+run             ${total_steps}
+restart         0
+
+unfix           SS
+unfix           DEF
+unfix           NVT
+
+write_data      outputs/${outprefix}_tension_final.data
+write_restart   outputs/${outprefix}_tension_final.restart

@@ -1,0 +1,1 @@
+All LAMMPS input bytes are unchanged. Public directories and index metadata use M4_RATIO; see `../MODEL_NAME_MAPPING.md` for the historical label retained inside archived input text. Historical test, benchmark, and continuation/recovery orchestration files are not part of this public layer.

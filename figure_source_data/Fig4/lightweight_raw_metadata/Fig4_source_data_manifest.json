@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-07-02 12:26:35",
+  "elapsed_seconds": 40.592,
+  "software": "OVITO Python module 3.15.4 with AtomicStrainModifier",
+  "d2min_reference_frame": 0,
+  "d2min_cutoff_A": 4.0,
+  "deltaPE_definition": "c_peatom(frame) - c_peatom(frame 0) for the same atom identifier",
+  "threshold_scheme": "four-model global P95, 10 A region-band source tables",
+  "d2min_threshold_value": 1420.9058752475846,
+  "deltaPE_threshold_value": 0.1997899999999997,
+  "primary_cluster_cutoff_A": 4.0,
+  "sensitivity_cutoffs_A": [
+    3.5,
+    4.0,
+    4.5,
+    5.0
+  ],
+  "metric_definition": "largest full-3D overlap-derived candidate cluster atoms / selected Al-matrix atom count x 100",
+  "selection_region": "construction-source central Al matrix layer",
+  "snapshot_view": "central Y-slab projection view for visual support only",
+  "model_summaries": [
+    {
+      "model": "M3_SYM",
+      "frames": 251,
+      "phase_counts": {
+        "Cu": 152704,
+        "Al": 124128,
+        "Al2Cu": 180896,
+        "Al4Cu9": 0
+      },
+      "metric_frame_count": 22,
+      "snapshot_count": 2
+    },
+    {
+      "model": "M4_RATIO",
+      "frames": 251,
+      "phase_counts": {
+        "Cu": 151556,
+        "Al": 124128,
+        "Al2Cu": 137380,
+        "Al4Cu9": 62866
+      },
+      "metric_frame_count": 21,
+      "snapshot_count": 2
+    },
+    {
+      "model": "M4_SYM",
+      "frames": 251,
+      "phase_counts": {
+        "Cu": 151556,
+        "Al": 124128,
+        "Al2Cu": 82084,
+        "Al4Cu9": 122978
+      },
+      "metric_frame_count": 22,
+      "snapshot_count": 2
+    }
+  ]
+}

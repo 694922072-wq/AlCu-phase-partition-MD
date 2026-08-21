@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-06-30 10:19:11",
+  "label_clear_update": "Panel labels moved into reserved header bands above each snapshot.",
+  "builder": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_final_dense_submission\\build_fig6_final_dense_submission_label_clear.py",
+  "stage2a_folder": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision",
+  "render_metadata": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\Fig6_stage2A_schemeA_render_metadata.json",
+  "raw_render_folder": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A",
+  "dense_metric_csv": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\Fig6_stage2A_dense_metric_schemeA.csv",
+  "palette": {
+    "Cu": "#4F6DFF",
+    "Al": "#8AA8FF",
+    "Al4Cu9": "#2DB7C9",
+    "Al2Cu": "#74D66A",
+    "HCP": "#E64B35",
+    "Other": "#B5C3D6",
+    "Guide": "#555555",
+    "Border": "#D2D9E4",
+    "SoftGuide": "#D9DEE7",
+    "Text": "#111820",
+    "Subtext": "#505B69",
+    "PanelBG": "#FFFFFF",
+    "HeaderBG": "#F8FAFD"
+  },
+  "final_image_px": [
+    8650,
+    6705
+  ],
+  "snapshot_matrix_px": [
+    5258,
+    4968
+  ],
+  "quant_panel_px": [
+    3300,
+    5600
+  ],
+  "metric_rows": 59,
+  "outputs": [
+    "Fig6_final_dense_submission.png",
+    "Fig6_final_dense_submission.tif",
+    "Fig6_final_dense_submission.pdf",
+    "Fig6_final_dense_submission.svg",
+    "Fig6_final_dense_snapshot_matrix.png",
+    "Fig6_final_dense_quant_panel.png",
+    "Fig6_caption_draft_final_dense.md",
+    "Fig6_quality_check_final_dense.md",
+    "claim_boundary_check_final_dense.md",
+    "Fig6_source_data_manifest_final_dense.md",
+    "Fig6_metric_data_final_dense.csv",
+    "unresolved_items_final_dense.md",
+    "Fig6_generation_log_final_dense.md"
+  ]
+}

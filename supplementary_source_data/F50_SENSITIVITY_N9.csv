@@ -1,0 +1,10 @@
+﻿model,replica,seed,F50_primary,F50_centered_three_point,F50_three_consecutive,centered_shift_percentage_points,consecutive_shift_percentage_points,maximum_shift,model_order_changed,primary_definition
+M3_SYM,R1,3847291,18.4,18.4,18.4,0,0,0,NO,first raw post-peak row <= 0.5 * own raw peak; no interpolation/smoothing/extrapolation
+M3_SYM,R2,28471,19.4000000000002,19.4000000000002,19.4000000000002,0,0,0,NO,first raw post-peak row <= 0.5 * own raw peak; no interpolation/smoothing/extrapolation
+M3_SYM,R3,39581,18.9199999999999,18.9199999999999,18.9199999999999,0,0,0,NO,first raw post-peak row <= 0.5 * own raw peak; no interpolation/smoothing/extrapolation
+M4_RATIO,R1,4928459,18.6699999999997,18.6699999999997,18.6699999999997,0,0,0,NO,first raw post-peak row <= 0.5 * own raw peak; no interpolation/smoothing/extrapolation
+M4_RATIO,R2,41777,18.2099999999998,18.2099999999998,18.2099999999998,0,0,0,NO,first raw post-peak row <= 0.5 * own raw peak; no interpolation/smoothing/extrapolation
+M4_RATIO,R3,52891,18.1100000000002,18.1100000000002,18.1100000000002,0,0,0,NO,first raw post-peak row <= 0.5 * own raw peak; no interpolation/smoothing/extrapolation
+M4_SYM,R1,9520510,17.9499999999998,17.9499999999998,17.9499999999998,0,0,0,NO,first raw post-peak row <= 0.5 * own raw peak; no interpolation/smoothing/extrapolation
+M4_SYM,R2,63997,18.2299999999998,18.2299999999998,18.2299999999998,0,0,0,NO,first raw post-peak row <= 0.5 * own raw peak; no interpolation/smoothing/extrapolation
+M4_SYM,R3,74131,17.5299999999998,17.5299999999998,17.5299999999998,0,0,0,NO,first raw post-peak row <= 0.5 * own raw peak; no interpolation/smoothing/extrapolation

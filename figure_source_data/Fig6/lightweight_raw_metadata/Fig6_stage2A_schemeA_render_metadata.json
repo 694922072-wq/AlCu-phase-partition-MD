@@ -1,0 +1,289 @@
+{
+  "software": "OVITO Pro 3.15.4",
+  "stage": "Fig. 6 Stage 2A Scheme A revision",
+  "strategy": "50 A central-Y-slab phase-context background plus selected Cu/Al-matrix PTM-HCP-like overlay",
+  "palette_hex": {
+    "Cu_context": "#4F6DFF",
+    "Al_context": "#8AA8FF",
+    "Al4Cu9_context": "#2DB7C9",
+    "Al2Cu_context": "#74D66A",
+    "PTM_HCP_like": "#E64B35",
+    "matrix_other": "#C7D4E8",
+    "guide": "#555555",
+    "background": "#FFFFFF"
+  },
+  "display_depth_A": 50.0,
+  "rendering_adjustments": {
+    "renderer": "OpenGLRenderer flat-style",
+    "context_radius_A": 0.7,
+    "context_transparency": 0.0,
+    "other_unclassified_radius_A": 0.68,
+    "other_unclassified_transparency": 0.0,
+    "hcp_like_radius_A": 1.03,
+    "hcp_like_transparency": 0.0
+  },
+  "camera": {
+    "projection": "orthographic",
+    "direction": [
+      -0.14,
+      0.99,
+      0.0
+    ],
+    "up": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "fov": 200.0
+  },
+  "models": [
+    {
+      "model": "M3_SYM",
+      "trajectory": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\dumps\\M3_SYM_tensile_x25_xy_z_clean_light.lammpstrj",
+      "construction": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\structure\\M3_SYM_Cu_Al2CuThick_Al_PPP_ready.data",
+      "layers": [
+        [
+          "Cu",
+          43.38
+        ],
+        [
+          "Al2Cu",
+          63.401
+        ],
+        [
+          "Al",
+          97.2
+        ],
+        [
+          "Al2Cu",
+          63.401
+        ],
+        [
+          "Cu",
+          43.38
+        ]
+      ],
+      "frames": [
+        {
+          "state": "initial",
+          "raw_path": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A\\Fig6_stage2A_schemeA_M3_SYM_initial_50A.png",
+          "target_strain_percent": 0.0,
+          "frame_index": 0,
+          "timestep": 0,
+          "actual_strain_percent": -5.81282725061591e-14,
+          "absolute_error_percent": 5.81282725061591e-14,
+          "display_atoms": 156474,
+          "selected_matrix_hcp_like_count": 214,
+          "box_A": {
+            "x": 146.68443532736592,
+            "y": 146.68443532736592,
+            "z": 317.2359583401252
+          }
+        },
+        {
+          "state": "15pct",
+          "raw_path": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A\\Fig6_stage2A_schemeA_M3_SYM_15pct_50A.png",
+          "target_strain_percent": 15.0,
+          "frame_index": 150,
+          "timestep": 150000,
+          "actual_strain_percent": 14.9999999999999,
+          "absolute_error_percent": 9.947598300641403e-14,
+          "display_atoms": 155973,
+          "selected_matrix_hcp_like_count": 26544,
+          "box_A": {
+            "x": 168.6871006264708,
+            "y": 146.68443532736592,
+            "z": 317.2359583401252
+          }
+        },
+        {
+          "state": "F50",
+          "raw_path": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A\\Fig6_stage2A_schemeA_M3_SYM_F50_50A.png",
+          "target_strain_percent": 19.2,
+          "frame_index": 192,
+          "timestep": 192000,
+          "actual_strain_percent": 19.1999999999999,
+          "absolute_error_percent": 9.947598300641403e-14,
+          "display_atoms": 153477,
+          "selected_matrix_hcp_like_count": 23049,
+          "box_A": {
+            "x": 174.8478469102202,
+            "y": 146.68443532736592,
+            "z": 317.2359583401252
+          }
+        }
+      ]
+    },
+    {
+      "model": "M4_RATIO",
+      "trajectory": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\dumps\\M4_SYM_RATIO_tensile_x25_xy_z_clean_light.lammpstrj",
+      "construction": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\structure\\M4_SYM_RATIO_ready.data",
+      "layers": [
+        [
+          "Cu",
+          43.38
+        ],
+        [
+          "Al4Cu9",
+          17.235461
+        ],
+        [
+          "Al2Cu",
+          48.77
+        ],
+        [
+          "Al",
+          97.2
+        ],
+        [
+          "Al2Cu",
+          48.77
+        ],
+        [
+          "Al4Cu9",
+          17.235461
+        ],
+        [
+          "Cu",
+          43.38
+        ]
+      ],
+      "frames": [
+        {
+          "state": "initial",
+          "raw_path": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A\\Fig6_stage2A_schemeA_M4_RATIO_initial_50A.png",
+          "target_strain_percent": 0.0,
+          "frame_index": 0,
+          "timestep": 0,
+          "actual_strain_percent": 1.17116319599619e-13,
+          "absolute_error_percent": 1.17116319599619e-13,
+          "display_atoms": 162841,
+          "selected_matrix_hcp_like_count": 1206,
+          "box_A": {
+            "x": 145.60759522277516,
+            "y": 145.58329672763648,
+            "z": 331.60460908288013
+          }
+        },
+        {
+          "state": "15pct",
+          "raw_path": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A\\Fig6_stage2A_schemeA_M4_RATIO_15pct_50A.png",
+          "target_strain_percent": 15.0,
+          "frame_index": 150,
+          "timestep": 150000,
+          "actual_strain_percent": 15.0000000000001,
+          "absolute_error_percent": 9.947598300641403e-14,
+          "display_atoms": 163609,
+          "selected_matrix_hcp_like_count": 53743,
+          "box_A": {
+            "x": 167.44873450619144,
+            "y": 145.58329672763648,
+            "z": 331.60460908288013
+          }
+        },
+        {
+          "state": "F50",
+          "raw_path": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A\\Fig6_stage2A_schemeA_M4_RATIO_F50_50A.png",
+          "target_strain_percent": 17.98,
+          "frame_index": 180,
+          "timestep": 180000,
+          "actual_strain_percent": 18.0000000000001,
+          "absolute_error_percent": 0.02000000000009905,
+          "display_atoms": 151997,
+          "selected_matrix_hcp_like_count": 63263,
+          "box_A": {
+            "x": 171.8169623628747,
+            "y": 145.58329672763648,
+            "z": 331.60460908288013
+          }
+        }
+      ]
+    },
+    {
+      "model": "M4_SYM",
+      "trajectory": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\dumps\\M4_SYM_tensile_x25_xy_z_clean_light.lammpstrj",
+      "construction": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\structure\\M4_SYM_Cu_Al4Cu9_Al2Cu_Al_PPP_ready.data",
+      "layers": [
+        [
+          "Cu",
+          43.38
+        ],
+        [
+          "Al4Cu9",
+          34.470922
+        ],
+        [
+          "Al2Cu",
+          29.262
+        ],
+        [
+          "Al",
+          97.2
+        ],
+        [
+          "Al2Cu",
+          29.262
+        ],
+        [
+          "Al4Cu9",
+          34.470922
+        ],
+        [
+          "Cu",
+          43.38
+        ]
+      ],
+      "frames": [
+        {
+          "state": "initial",
+          "raw_path": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A\\Fig6_stage2A_schemeA_M4_SYM_initial_50A.png",
+          "target_strain_percent": 0.0,
+          "frame_index": 0,
+          "timestep": 0,
+          "actual_strain_percent": 7.7959221699448e-14,
+          "absolute_error_percent": 7.7959221699448e-14,
+          "display_atoms": 164768,
+          "selected_matrix_hcp_like_count": 25,
+          "box_A": {
+            "x": 145.82859505692213,
+            "y": 145.82859505692213,
+            "z": 328.21374085390255
+          }
+        },
+        {
+          "state": "15pct",
+          "raw_path": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A\\Fig6_stage2A_schemeA_M4_SYM_15pct_50A.png",
+          "target_strain_percent": 15.0,
+          "frame_index": 150,
+          "timestep": 150000,
+          "actual_strain_percent": 15.0000000000001,
+          "absolute_error_percent": 9.947598300641403e-14,
+          "display_atoms": 164859,
+          "selected_matrix_hcp_like_count": 59231,
+          "box_A": {
+            "x": 167.70288431546044,
+            "y": 145.82859505692213,
+            "z": 328.21374085390255
+          }
+        },
+        {
+          "state": "F50",
+          "raw_path": "D:\\leng\\AlCu_MAIN_PPP_Zhou\\figures\\Fig6_stage2A_schemeA_revision\\_ovito_renders_schemeA_50A\\Fig6_stage2A_schemeA_M4_SYM_F50_50A.png",
+          "target_strain_percent": 17.74,
+          "frame_index": 177,
+          "timestep": 177000,
+          "actual_strain_percent": 17.7000000000001,
+          "absolute_error_percent": 0.03999999999989967,
+          "display_atoms": 160185,
+          "selected_matrix_hcp_like_count": 59831,
+          "box_A": {
+            "x": 171.64025638199732,
+            "y": 145.82859505692213,
+            "z": 328.21374085390255
+          }
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 20.65946888923645
+}

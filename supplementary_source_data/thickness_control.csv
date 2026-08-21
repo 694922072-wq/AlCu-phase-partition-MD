@@ -1,0 +1,5 @@
+model,slab,target_thickness_A,actual_thickness_A,repeat_z,notes
+M3_SYM,single_side_Al2Cu_thick,63.73292216,63.400999999999996,13,Chosen to match one side of M4_SYM Al4Cu9 + Al2Cu IMC thickness.
+M4_SYM,single_side_Al4Cu9,,34.47092216,4,Part of one-side composite IMC.
+M4_SYM,single_side_Al2Cu,,29.262,6,Part of one-side composite IMC.
+M4_SYM,single_side_Al4Cu9_plus_Al2Cu,60-65,63.73292216,4 + 6,Reference IMC thickness used to choose M3_SYM Al2Cu(thick).
