@@ -37,11 +37,24 @@ The controlled mechanical comparison uses nine independent velocity-seed traject
 
 ## Data availability
 
-GitHub repository: https://github.com/694922072-wq/AlCu-phase-partition-MD
+GitHub repository:
+https://github.com/694922072-wq/AlCu-phase-partition-MD
 
-Zenodo archival record (reserved DOI; the record remains an unpublished draft): https://doi.org/10.5281/zenodo.22043296
+Zenodo archival record:
+https://doi.org/10.5281/zenodo.22043296
 
-The large archival payload is assigned to the Zenodo record above and will become accessible only after the author-approved publication step.
+The GitHub repository contains simulation inputs, analysis and
+plotting code, processed data, figure-source data, supplementary
+source data, and reproducibility metadata.
+
+The Zenodo archival record contains the nine authoritative
+controlled mechanical trajectories, full construction-ready model
+files, retained state files, and the complete archival source-data
+package.
+
+The third-party Zhou04 EAM/alloy potential is not redistributed.
+Its exact filename, NIST repository source, and SHA-256 checksum
+are documented in the repository.
 
 ## Potential
 
@@ -55,7 +68,7 @@ The third-party potential `CuAgAuNiPdPtAlPbFeMoTaWMgCoTiZr_Zhou04.eam.alloy` is 
 
 ## Citation
 
-Use `CITATION.cff`. The reserved Zenodo DOI is included there; add the final article DOI after assignment.
+Use `CITATION.cff`. The published Zenodo DOI is included there; add the final article DOI after assignment.
 
 ## Limitations and audit
 
