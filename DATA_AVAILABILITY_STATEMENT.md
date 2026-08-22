@@ -1,13 +1,26 @@
 # Data Availability statement
 
-## Ready-to-paste text after identifiers are assigned
+The simulation input files, analysis and plotting code, processed
+mechanical and atomistic source data, figure-source data,
+supplementary source data, and reproducibility metadata underlying
+this study are publicly available at GitHub:
 
-The simulation inputs, analysis and plotting code, processed mechanical data, figure source data, supplementary source data, and model metadata supporting this study are available in the GitHub repository at **[GITHUB_URL]**. The nine authoritative controlled mechanical trajectories, full construction-ready model files, retained binary state files, and complete source-data archive are available in Zenodo at **[ZENODO_DOI_OR_RECORD_URL]**. The third-party Zhou04 EAM/alloy potential is not redistributed; its file name, NIST source, and SHA-256 checksum are provided in the repository. M4_LIT is a single-trajectory topology reference, while n=3 replication applies to M3_SYM, M4_RATIO, and M4_SYM mechanical trajectories only.
+https://github.com/694922072-wq/AlCu-phase-partition-MD
 
-## Required replacements
+The complete archival package, including the nine controlled
+mechanical trajectories used for the replicated mechanical
+statistics, construction-ready model files, retained state files,
+and complete source-data archive, is available at Zenodo:
 
-- Replace `[GITHUB_URL]` with the public or reviewer-access repository URL.
-- Replace `[ZENODO_DOI_OR_RECORD_URL]` with the reserved DOI or reviewer-access record URL.
-- Do not invent either identifier before deposition.
+https://doi.org/10.5281/zenodo.22043296
 
-Status: `needs_author_input` until both identifiers are supplied.
+The third-party Zhou04 EAM/alloy potential is not redistributed.
+Its exact filename, NIST Interatomic Potentials Repository source,
+and SHA-256 checksum are documented in the repository and
+Supplementary Information.
+
+M4_LIT is a single-trajectory topology reference. The n = 3
+replication applies to the mechanical trajectories of M3_SYM,
+M4_RATIO, and M4_SYM only.
+
+Status: public release complete.

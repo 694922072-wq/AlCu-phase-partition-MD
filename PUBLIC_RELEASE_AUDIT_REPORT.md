@@ -1,3 +1,23 @@
+# Historical pre-publication audit notice
+
+This file records the pre-publication release audit completed before
+the GitHub and Zenodo records were made public.
+
+The public release has since been completed successfully.
+
+Current public identifiers:
+
+GitHub:
+https://github.com/694922072-wq/AlCu-phase-partition-MD
+
+Zenodo:
+https://doi.org/10.5281/zenodo.22043296
+
+For the current publication state, refer to the repository README,
+CITATION.cff, DATA_AVAILABILITY_STATEMENT.md, and public Zenodo record.
+
+---
+
 # Public release audit report
 
 - Audit timestamp: 2026-08-20T15:20:46.221115+00:00
